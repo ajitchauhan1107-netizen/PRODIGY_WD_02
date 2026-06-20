@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1e2f;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #f5f5f5;
+}
+
+.stopwatch-container {
+  background: #2a2a40;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #aab4ff;
+}
+
+#display {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #4b4bff;
+  color: white;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #5e5eff;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #444460;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#resetBtn {
+  background: #ff4b6e;
+}
+
+#resetBtn:hover {
+  background: #ff5e7e;
+}
+
+#laps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+#laps li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid #3a3a55;
+  font-size: 0.9rem;
+}
+
+#laps li:last-child {
+  border-bottom: none;
+}
+
+.lap-time {
+  font-variant-numeric: tabular-nums;
+  color: #aab4ff;
+}
